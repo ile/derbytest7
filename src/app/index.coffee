@@ -42,3 +42,7 @@ app.fn 'list.add', (e, el) ->
 app.fn 'list.remove', (e) ->
   item = e.get ':item'
   @model.del 'items.' + item.id
+
+app.fn 'list.edit', (e) ->
+  item = e.get ':item'
+  item.name = 'name changed...'
